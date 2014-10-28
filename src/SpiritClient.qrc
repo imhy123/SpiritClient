@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>Resource/min_w.png</file>
+        <file>Resource/tray_w.png</file>
+        <file>Resource/close_w.png</file>
+        <file>Resource/min_r.png</file>
+        <file>Resource/tray_r.png</file>
+        <file>Resource/close_r.png</file>
+        <file>Resource/SpiritClient_16x16.png</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>SpiritClient.ico</file>
+    </qresource>
+</RCC>

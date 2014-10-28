@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>580</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SpiritClient</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="SpiritClient.qrc">
+    <normaloff>:/icons/SpiritClient.ico</normaloff>:/icons/SpiritClient.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: #59B3FF;</string>
+   </property>
+   <widget class="MouseWidget" name="infoWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>290</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #854384;</string>
+    </property>
+    <widget class="QLabel" name="titleLabel">
+     <property name="geometry">
+      <rect>
+       <x>35</x>
+       <y>20</y>
+       <width>220</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;微软雅黑&quot;;
+font-weight: bold;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>SpiritClient Vx.x</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="blogLabel">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>70</y>
+       <width>130</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>www.spirithy.com</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="totalFlowLabel">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>200</y>
+       <width>62</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>流量总额：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="residualFlowLabel">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>220</y>
+       <width>62</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>剩余流量：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="interFlowLabel">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>240</y>
+       <width>62</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>内网流量：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="residualMoneyLabel">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>260</y>
+       <width>62</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>账户余额：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="totalFlowELabel">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>200</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>暂无</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="residualFlowELabel">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>220</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>暂无</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="interFlowELabel">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>240</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>暂无</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="residualMoneyELabel">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>260</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>暂无</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="onlineTimeLabel">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>180</y>
+       <width>62</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>在线时间：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="onlineTimeELabel">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>180</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>暂无</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="accountLabel">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>100</y>
+      <width>51</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>账号：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pwdLabel">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>140</y>
+      <width>51</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>密码：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="accountEdit">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>100</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>11</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	font: 75 11pt &quot;微软雅黑&quot;;
+	color: #854384;
+	border: 2px solid #CCCCCC;
+}
+
+QLineEdit:focus {
+	border: 2px solid #FFFFFF;
+}</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pwdEdit">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>140</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	font: 75 11pt &quot;微软雅黑&quot;;
+	color: #854384;
+	border: 2px solid #CCCCCC;
+}
+
+QLineEdit:focus {
+	border: 2px solid #FFFFFF;
+}</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loginButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>200</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	font: 13pt &quot;微软雅黑&quot;;
+	border: none;
+	border-right: 2px solid #FFFFFF;
+	border-bottom: 2px solid #FFFFFF;
+	color: #FFFFFF;
+	outline: none;
+}
+
+QPushButton:hover {
+	border: 2px solid #FFFFFF;
+	background-color: #9D9389;
+}
+
+QPushButton:pressed {
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+QPushButton:disabled {
+	border:2px solid #979481;
+	color: #979481;
+}</string>
+    </property>
+    <property name="text">
+     <string>登录</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="logoffButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>200</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	font: 13pt &quot;微软雅黑&quot;;
+	border: none;
+	border-right: 2px solid #FFFFFF;
+	border-bottom: 2px solid #FFFFFF;
+	color: #FFFFFF;
+	outline: none;
+}
+
+QPushButton:hover {
+	border: 2px solid #FFFFFF;
+	background-color: #9D9389;
+}
+
+QPushButton:pressed {
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+QPushButton:disabled {
+	border:2px solid #979481;
+	color: #979481;
+}</string>
+    </property>
+    <property name="text">
+     <string>下线</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="configLabel">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;微软雅黑&quot;;
+font-weight: bold;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>设置</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="autoLoginCbox">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>80</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>自动登录</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="autoStartCbox">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>110</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>开机自启</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="reconnectCbox">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>140</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>定时重连</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="otherConfigLabel">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>180</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;微软雅黑&quot;;
+font-weight: bold;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>其他</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="minButton">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>10</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: none;
+	background-image: url(:/images/Resource/min_w.png);
+}
+
+QPushButton:hover {
+	background-image: url(:/images/Resource/min_r.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="toTrayButton">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>10</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: none;
+	background-image: url(:/images/Resource/tray_w.png);
+}
+
+QPushButton:hover {
+	background-image: url(:/images/Resource/tray_r.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closeButton">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>10</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: none;
+	background-image: url(:/images/Resource/close_w.png);
+}
+
+QPushButton:hover {
+	background-image: url(:/images/Resource/close_r.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="statusELabel">
+    <property name="geometry">
+     <rect>
+      <x>314</x>
+      <y>250</y>
+      <width>251</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chargeLinkButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>240</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: none;
+	font: 12pt &quot;微软雅黑&quot;;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton:hover {
+	color: #854384;
+}</string>
+    </property>
+    <property name="text">
+     <string>[网上交费链接]</string>
+    </property>
+   </widget>
+   <zorder>chargeLinkButton</zorder>
+   <zorder>accountLabel</zorder>
+   <zorder>pwdLabel</zorder>
+   <zorder>accountEdit</zorder>
+   <zorder>pwdEdit</zorder>
+   <zorder>loginButton</zorder>
+   <zorder>logoffButton</zorder>
+   <zorder>configLabel</zorder>
+   <zorder>autoLoginCbox</zorder>
+   <zorder>autoStartCbox</zorder>
+   <zorder>reconnectCbox</zorder>
+   <zorder>otherConfigLabel</zorder>
+   <zorder>minButton</zorder>
+   <zorder>toTrayButton</zorder>
+   <zorder>closeButton</zorder>
+   <zorder>statusELabel</zorder>
+   <zorder>infoWidget</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MouseWidget</class>
+   <extends>QWidget</extends>
+   <header>mousewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="SpiritClient.qrc"/>
+ </resources>
+ <connections/>
+</ui>
